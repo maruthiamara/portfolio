@@ -64,7 +64,7 @@ export default function ProjectCard({
         }}
         whileHover={{ scale: 1.02 }}
         transition={{ type: 'spring', stiffness: 260, damping: 22 }}
-        className="gradient-border glass group relative flex h-[620px] flex-col overflow-hidden rounded-[24px] p-3 shadow-2xl shadow-black/40"
+        className="gradient-border glass group relative flex h-[1240px] flex-col overflow-hidden rounded-[24px] p-3 shadow-2xl shadow-black/40"
       >
         {/* Spotlight glow following the cursor */}
         <div
@@ -108,72 +108,72 @@ export default function ProjectCard({
               {project.shortDescription}
             </p>
 
-          {/* Problem statement */}
-          <div className="mt-4">
-            <p className="text-[11px] font-semibold uppercase tracking-widest text-white/40">
-              Problem
-            </p>
-            <p className="mt-1 text-sm leading-relaxed text-white/55">
-              {project.problemStatement}
-            </p>
-          </div>
+            {/* Problem statement */}
+            <div className="mt-4">
+              <p className="text-[11px] font-semibold uppercase tracking-widest text-white/40">
+                Problem
+              </p>
+              <p className="mt-1 text-sm leading-relaxed text-white/55">
+                {project.problemStatement}
+              </p>
+            </div>
 
-          {/* Key features */}
-          <div className="mt-4">
-            <p className="text-[11px] font-semibold uppercase tracking-widest text-white/40">
-              Key Features
-            </p>
-            <ul className="mt-2 space-y-1.5">
-              {project.keyFeatures.slice(0, 3).map((f) => (
-                <li key={f} className="flex gap-2 text-sm text-white/65">
+            {/* Key features */}
+            <div className="mt-4">
+              <p className="text-[11px] font-semibold uppercase tracking-widest text-white/40">
+                Key Features
+              </p>
+              <ul className="mt-2 space-y-1.5">
+                {project.keyFeatures.slice(0, 3).map((f) => (
+                  <li key={f} className="flex gap-2 text-sm text-white/65">
+                    <span
+                      className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full"
+                      style={{ background: accent.to }}
+                    />
+                    {f}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Highlights */}
+            <div className="mt-4">
+              <p className="text-[11px] font-semibold uppercase tracking-widest text-white/40">
+                Highlights
+              </p>
+              <div className="mt-2 flex flex-wrap gap-2">
+                {project.highlights.map((h) => (
                   <span
-                    className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full"
-                    style={{ background: accent.to }}
-                  />
-                  {f}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Highlights */}
-          <div className="mt-4">
-            <p className="text-[11px] font-semibold uppercase tracking-widest text-white/40">
-              Highlights
-            </p>
-            <div className="mt-2 flex flex-wrap gap-2">
-              {project.highlights.map((h) => (
-                <span
-                  key={h}
-                  className="rounded-lg border border-white/10 bg-white/[0.03] px-2.5 py-1 text-xs text-white/70"
-                >
-                  {h}
-                </span>
-              ))}
+                    key={h}
+                    className="rounded-lg border border-white/10 bg-white/[0.03] px-2.5 py-1 text-xs text-white/70"
+                  >
+                    {h}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Technologies */}
-          <div className="mt-4">
-            <p className="text-[11px] font-semibold uppercase tracking-widest text-white/40">
-              Technologies
-            </p>
-            <div className="mt-2 flex flex-wrap gap-2">
-              {project.technologies.map((t) => (
-                <span
-                  key={t}
-                  className="rounded-full border px-2.5 py-1 text-xs font-medium transition-colors duration-200"
-                  style={{
-                    color: accent.text,
-                    borderColor: accent.ring,
-                    background: 'rgba(255,255,255,0.02)',
-                  }}
-                >
-                  {t}
-                </span>
-              ))}
+            {/* Technologies */}
+            <div className="mt-4">
+              <p className="text-[11px] font-semibold uppercase tracking-widest text-white/40">
+                Technologies
+              </p>
+              <div className="mt-2 flex flex-wrap gap-2">
+                {project.technologies.map((t) => (
+                  <span
+                    key={t}
+                    className="rounded-full border px-2.5 py-1 text-xs font-medium transition-colors duration-200"
+                    style={{
+                      color: accent.text,
+                      borderColor: accent.ring,
+                      background: 'rgba(255,255,255,0.02)',
+                    }}
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
           </div>
           {/* /scrollable content */}
 

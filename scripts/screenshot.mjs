@@ -10,7 +10,7 @@
 //   node scripts/screenshot.mjs <url> <out.png> [full] [width] [height]
 // Examples:
 //   node scripts/screenshot.mjs http://localhost:4173/portfolio/ /tmp/home.png full
-//   node scripts/screenshot.mjs https://nanda-1243.github.io/portfolio/ /tmp/live.png
+//   node scripts/screenshot.mjs https://maruthiamara.github.io/portfolio/ /tmp/live.png
 
 import { existsSync, readdirSync } from 'node:fs'
 import puppeteer from 'puppeteer-core'

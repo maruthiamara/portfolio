@@ -4,13 +4,13 @@
 // ─────────────────────────────────────────────────────────────────────────
 
 export const profile = {
-  name: 'Amara Maruthi Venkatasatyakishore',
+  name: 'Maruthi Amara',
   shortName: 'Maruthi',
   title: 'Machine Learning Engineer',
   tagline:
     'Building scalable ML pipelines, RAG systems, LLM applications, and real-time AI solutions.',
   location: 'India',
-  phone: '+91 9618166747',
+  // phone: '+91 9618166747',
   email: 'maruthiamara07@gmail.com',
   summary:
     'Machine Learning Engineer with expertise in Machine Learning, Deep Learning, and Generative AI. Experienced in building scalable ML pipelines, RAG systems, LLM applications, and real-time AI solutions using Python, TensorFlow, PyTorch, FastAPI, Apache Kafka, Hadoop, PySpark, PostgreSQL (pgvector), and GeoServer.',
@@ -20,7 +20,7 @@ export const profile = {
   // URLs into each project in `projects.ts` when you have them.
   links: {
     linkedin: 'https://www.linkedin.com/in/amara-maruthi',
-    github: 'https://github.com/nanda-1243',
+    github: 'https://github.com/maruthiamara',
     email: 'mailto:maruthiamara07@gmail.com',
   },
 }

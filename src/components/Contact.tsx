@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, Phone, MapPin } from 'lucide-react'
+import { Github, Linkedin, Mail, MapPin } from 'lucide-react'
 import { profile } from '../data/profile'
 import SectionHeading from './SectionHeading'
 
@@ -28,9 +28,9 @@ export default function Contact() {
         </a>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-white/55">
-          <span className="inline-flex items-center gap-2">
+          {/* <span className="inline-flex items-center gap-2">
             <Phone size={15} /> {profile.phone}
-          </span>
+          </span> */}
           <span className="inline-flex items-center gap-2">
             <MapPin size={15} /> {profile.location}
           </span>

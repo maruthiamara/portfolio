@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion'
-import { Briefcase, GraduationCap, Award } from 'lucide-react'
-import { experience, education, certifications } from '../data/profile'
+import { Briefcase } from 'lucide-react'
+import { experience } from '../data/profile'
 import SectionHeading from './SectionHeading'
 
 export default function Experience() {
   return (
     <section id="experience" className="mx-auto max-w-5xl px-4 py-24">
-      <SectionHeading eyebrow="Journey" title="Experience & Education" />
+      <SectionHeading eyebrow="Journey" title="Experience" />
 
       {/* Experience */}
       <div className="space-y-6">
@@ -44,56 +44,6 @@ export default function Experience() {
             </ul>
           </motion.div>
         ))}
-      </div>
-
-      {/* Education + Certifications */}
-      <div className="mt-8 grid gap-6 lg:grid-cols-3">
-        <div className="lg:col-span-2 space-y-4">
-          {education.map((ed, i) => (
-            <motion.div
-              key={ed.school}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.06 }}
-              className="glass flex items-start justify-between gap-4 rounded-2xl border border-white/5 p-5"
-            >
-              <div className="flex items-start gap-3">
-                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-white/5 text-purple-200">
-                  <GraduationCap size={18} />
-                </span>
-                <div>
-                  <h4 className="font-semibold text-white">{ed.school}</h4>
-                  <p className="text-sm text-white/55">{ed.detail}</p>
-                </div>
-              </div>
-              <div className="text-right">
-                <p className="text-sm text-white/55">{ed.period}</p>
-                <p className="text-sm font-medium text-cyan-200/90">{ed.score}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="glass rounded-2xl border border-white/5 p-6"
-        >
-          <h4 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-white/45">
-            <Award size={16} /> Certifications
-          </h4>
-          <ul className="mt-4 space-y-3">
-            {certifications.map((c) => (
-              <li key={c} className="flex gap-2.5 text-sm text-white/75">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" />
-                {c}
-              </li>
-            ))}
-          </ul>
-        </motion.div>
       </div>
     </section>
   )

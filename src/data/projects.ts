@@ -39,7 +39,7 @@ export type Project = {
   links: { github: string; demo: string | null }
 }
 
-const githubProfile = 'https://github.com/nanda-1243'
+const githubProfile = 'https://github.com/maruthiamara'
 
 export const projects: Project[] = [
   // ───────────────────────────────────────────────────────────────────────

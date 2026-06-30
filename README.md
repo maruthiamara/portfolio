@@ -1,6 +1,6 @@
 # Amara Maruthi — Portfolio
 
-A premium, Apple-inspired portfolio for **Amara Maruthi Venkatasatyakishore**, Machine Learning Engineer.
+A premium, Apple-inspired portfolio for **Maruthi Amara**, Machine Learning Engineer.
 Built with **React + Vite + Tailwind CSS + Framer Motion**, with a glassmorphism dark theme, tilt/spotlight
 project cards, and dedicated "Read More" pages for each project.
 
@@ -58,7 +58,7 @@ The current banners are stylized, generated SVG visuals (not stock or fake scree
 1. Push to the `main` branch (or merge your feature branch into `main`).
 2. In the repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 3. The workflow in `.github/workflows/deploy.yml` builds and deploys automatically.
-4. Site URL: `https://nanda-1243.github.io/portfolio/`
+4. Site URL: `https://maruthiamara.github.io/portfolio/`
 
 > If your GitHub username/repo differs, update `base` in `vite.config.ts` and `homepage`
 > in `package.json` to match `/<repo-name>/`.

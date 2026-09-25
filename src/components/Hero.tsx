@@ -37,15 +37,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.05 }}
-          className="mt-6 min-h-[1.3em] text-balance text-5xl font-bold leading-[1.05] tracking-tight sm:text-7xl flex items-center justify-center"
+          className="mt-6 text-balance text-5xl font-bold leading-[1.05] tracking-tight sm:text-7xl"
         >
-          <Typewriter
-            words={profile.name}
-            loop={false}
-            typingSpeed={90}
-            className="text-gradient animate-gradient-pan"
-            cursorClassName="text-cyan-400 font-normal opacity-80"
-          />
+          <span className="text-gradient animate-gradient-pan">Hi, I'm {profile.name}</span>
         </motion.h1>
 
         <motion.p
@@ -54,7 +48,16 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="mx-auto mt-5 max-w-2xl text-lg text-white/70 sm:text-xl"
         >
-          <span className="font-semibold text-white">{profile.title}</span> — {profile.tagline}
+          <Typewriter
+            words={profile.roles}
+            typingSpeed={90}
+            deletingSpeed={45}
+            pauseDuration={2200}
+            loop={true}
+            className="font-semibold text-cyan-300"
+            cursorClassName="text-cyan-400 font-normal"
+          />{' '}
+          — {profile.tagline}
         </motion.p>
 
         {/* Tech marquee row */}

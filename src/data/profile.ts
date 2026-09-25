@@ -7,6 +7,12 @@ export const profile = {
   name: 'Maruthi Amara',
   shortName: 'Maruthi',
   title: 'AI/ML Engineer',
+  roles: [
+    'AI/ML Engineer',
+    'Generative AI Developer',
+    'LLM & RAG Architect',
+    'Data Pipeline Engineer',
+  ],
   tagline:
     'Building scalable ML pipelines, RAG systems, LLM applications, and real-time AI solutions.',
   location: 'India',

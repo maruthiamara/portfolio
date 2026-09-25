@@ -6,6 +6,24 @@ import {
   Workflow,
   Database,
   Cpu,
+  Terminal,
+  Network,
+  Layers,
+  Flame,
+  Eye,
+  Bot,
+  Search,
+  Zap,
+  Server,
+  Activity,
+  Radio,
+  RadioTower,
+  Box,
+  Cloud,
+  Globe,
+  Compass,
+  FileText,
+  GitBranch,
   CheckCircle2,
 } from 'lucide-react'
 import { profile, skillGroups } from '../data/profile'
@@ -56,6 +74,13 @@ const categoryMeta: Record<
     border: 'hover:border-sky-400/50',
     badgeBg: 'hover:bg-sky-400/10 hover:text-sky-200',
   },
+  'Tools & DevOps': {
+    icon: <Cpu size={18} />,
+    color: 'text-rose-400',
+    glow: 'rgba(251, 113, 133, 0.15)',
+    border: 'hover:border-rose-400/50',
+    badgeBg: 'hover:bg-rose-400/10 hover:text-rose-200',
+  },
   Tools: {
     icon: <Cpu size={18} />,
     color: 'text-rose-400',
@@ -63,6 +88,36 @@ const categoryMeta: Record<
     border: 'hover:border-rose-400/50',
     badgeBg: 'hover:bg-rose-400/10 hover:text-rose-200',
   },
+}
+
+function getSkillSymbol(item: string) {
+  const name = item.toLowerCase()
+  if (name.includes('python')) return <Terminal size={13} className="text-amber-400" />
+  if (name.includes('sql')) return <Database size={13} className="text-amber-400" />
+  if (name === 'machine learning') return <BrainCircuit size={13} className="text-cyan-400" />
+  if (name.includes('deep learning')) return <Network size={13} className="text-cyan-400" />
+  if (name.includes('tensorflow')) return <Layers size={13} className="text-orange-400" />
+  if (name.includes('pytorch')) return <Flame size={13} className="text-red-400" />
+  if (name.includes('cnn')) return <Eye size={13} className="text-cyan-300" />
+  if (name.includes('llm')) return <Bot size={13} className="text-purple-400" />
+  if (name === 'rag') return <Sparkles size={13} className="text-purple-300" />
+  if (name.includes('semantic')) return <Search size={13} className="text-purple-400" />
+  if (name.includes('pyspark')) return <Zap size={13} className="text-emerald-400" />
+  if (name.includes('hadoop')) return <Server size={13} className="text-emerald-400" />
+  if (name.includes('kafka')) return <Activity size={13} className="text-emerald-300" />
+  if (name.includes('mqtt')) return <Radio size={13} className="text-emerald-400" />
+  if (name.includes('etl')) return <Workflow size={13} className="text-emerald-400" />
+  if (name.includes('real-time') || name.includes('streaming')) return <RadioTower size={13} className="text-emerald-300" />
+  if (name.includes('postgres')) return <Database size={13} className="text-sky-400" />
+  if (name.includes('docker')) return <Box size={13} className="text-blue-400" />
+  if (name.includes('kubernetes')) return <Cloud size={13} className="text-sky-300" />
+  if (name.includes('flask')) return <Code2 size={13} className="text-rose-400" />
+  if (name.includes('fastapi')) return <Zap size={13} className="text-teal-300" />
+  if (name.includes('geoserver')) return <Globe size={13} className="text-green-400" />
+  if (name.includes('qgis')) return <Compass size={13} className="text-emerald-300" />
+  if (name.includes('ocr')) return <FileText size={13} className="text-amber-300" />
+  if (name.includes('git')) return <GitBranch size={13} className="text-orange-400" />
+  return <Zap size={13} className="text-cyan-400" />
 }
 
 export default function About() {
@@ -133,15 +188,15 @@ export default function About() {
                   </span>
                 </div>
 
-                {/* Skill Pills */}
+                {/* Skill Pills with Unique Tech Symbols */}
                 <div className="mt-5 flex flex-wrap gap-2.5">
                   {group.items.map((item) => (
                     <motion.span
                       key={item}
                       whileHover={{ scale: 1.05 }}
-                      className={`inline-flex items-center gap-1.5 rounded-xl border border-white/10 bg-white/[0.05] px-3.5 py-1.5 text-sm font-medium text-white/85 shadow-sm backdrop-blur-md transition-all duration-200 ${meta.badgeBg}`}
+                      className={`inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.05] px-3.5 py-1.5 text-sm font-medium text-white/85 shadow-sm backdrop-blur-md transition-all duration-200 ${meta.badgeBg}`}
                     >
-                      <span className="h-1.5 w-1.5 rounded-full bg-white/40 group-hover:bg-cyan-300 transition-colors" />
+                      {getSkillSymbol(item)}
                       <span>{item}</span>
                     </motion.span>
                   ))}

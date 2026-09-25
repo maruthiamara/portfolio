@@ -16,9 +16,9 @@ export default function Contact() {
         style={{ ['--grad-from' as string]: 'rgba(6,182,212,0.6)', ['--grad-to' as string]: 'rgba(139,92,246,0.6)' }}
       >
         <div className="absolute -left-20 -bottom-20 h-64 w-64 rounded-full bg-violet-600/15 blur-3xl pointer-events-none" />
-        
+
         <p className="mx-auto max-w-xl text-lg sm:text-xl text-white/85 font-medium leading-relaxed relative z-10">
-          Open to AI/ML and Software Engineering opportunities. The fastest way to reach me is email —
+          Open to AI/ML opportunities. The fastest way to reach me is email —
           I usually reply within a day.
         </p>
 
@@ -29,7 +29,7 @@ export default function Contact() {
           >
             <Send size={18} />
             <span>Send Email</span>
-            <span className="text-white/60 font-normal text-xs ml-1">({profile.email})</span>
+            <span className="text-white/60 font-normal text-xs ml-1"></span>
           </a>
         </div>
 

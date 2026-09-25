@@ -10,6 +10,9 @@ const stack = [
   'PyTorch',
   'FastAPI',
   'Apache Kafka',
+  'Docker',
+  'Kubernetes',
+  'MQTT',
   'Hadoop',
   'PySpark',
   'PostgreSQL (pgvector)',
@@ -54,7 +57,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.18 }}
           className="mx-auto mt-6 max-w-2xl text-lg text-white/80 sm:text-2xl leading-relaxed"
         >
-          <span className="inline-block rounded-lg bg-white/10 px-3 py-1 text-white font-semibold border border-white/15 backdrop-blur-sm">
+          <span className="font-bold text-white text-xl sm:text-3xl tracking-tight">
             Software Engineer
           </span>{' '}
           <span className="text-white/70">— mainly focused on</span>{' '}

@@ -2,7 +2,6 @@ import { useParams, Navigate, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import {
   ArrowLeft,
-  Github,
   ExternalLink,
   Target,
   Workflow,
@@ -90,14 +89,6 @@ export default function ProjectDetail() {
             <ArrowLeft size={16} /> Back to projects
           </button>
           <div className="flex items-center gap-2">
-            <a
-              href={project.links.github}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-sm text-white/85 transition-colors hover:bg-white/10"
-            >
-              <Github size={15} /> GitHub
-            </a>
             {project.links.demo && (
               <a
                 href={project.links.demo}
@@ -282,41 +273,6 @@ export default function ProjectDetail() {
             </p>
           </Block>
         </div>
-
-        {/* Footer CTA */}
-        <motion.div
-          {...fade}
-          className="glass gradient-border mt-10 flex flex-col items-center justify-between gap-5 rounded-[24px] p-8 sm:flex-row"
-          style={{ ['--grad-from' as string]: accent.from, ['--grad-to' as string]: accent.to }}
-        >
-          <div>
-            <h3 className="text-xl font-semibold text-white">Explore the code</h3>
-            <p className="mt-1 text-sm text-white/60">
-              See the implementation behind {project.title}.
-            </p>
-          </div>
-          <div className="flex gap-3">
-            <a
-              href={project.links.github}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-sm font-medium text-white/85 transition-colors hover:bg-white/10"
-            >
-              <Github size={16} /> GitHub
-            </a>
-            {project.links.demo && (
-              <a
-                href={project.links.demo}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-ink-950"
-                style={{ background: `linear-gradient(120deg, ${accent.from}, ${accent.to})` }}
-              >
-                <ExternalLink size={16} /> Live Demo
-              </a>
-            )}
-          </div>
-        </motion.div>
       </main>
     </>
   )

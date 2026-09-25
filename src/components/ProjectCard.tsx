@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
-import { Github, ExternalLink, ArrowRight } from 'lucide-react'
+import { ExternalLink, ArrowRight } from 'lucide-react'
 import type { Project } from '../data/projects'
 import ProjectBanner from './ProjectBanner'
 
@@ -179,15 +179,6 @@ export default function ProjectCard({
 
           {/* Actions — pinned at the bottom of every card */}
           <div className="mt-5 flex shrink-0 flex-wrap items-center gap-3 border-t border-white/5 pt-4">
-            <a
-              href={project.links.github}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-white/85 transition-all hover:bg-white/10"
-            >
-              <Github size={16} /> GitHub
-            </a>
-
             {project.links.demo && (
               <a
                 href={project.links.demo}

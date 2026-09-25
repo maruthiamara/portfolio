@@ -31,7 +31,7 @@ export const profile = {
 }
 
 export const skillGroups = [
-  { label: 'Languages', items: ['Python'] },
+  { label: 'Languages', items: ['Python', 'SQL'] },
   {
     label: 'Machine Learning',
     items: ['Machine Learning', 'Deep Learning', 'TensorFlow', 'PyTorch', 'CNN'],
@@ -43,12 +43,16 @@ export const skillGroups = [
       'PySpark',
       'Hadoop',
       'Apache Kafka',
+      'MQTT',
       'ETL Pipelines',
       'Real-Time Streaming',
     ],
   },
   { label: 'Database', items: ['PostgreSQL'] },
-  { label: 'Tools', items: ['Flask', 'FastAPI', 'GeoServer', 'QGIS', 'OCR', 'Git'] },
+  {
+    label: 'Tools & DevOps',
+    items: ['Docker', 'Kubernetes', 'Flask', 'FastAPI', 'GeoServer', 'QGIS', 'OCR', 'Git'],
+  },
 ]
 
 export const experience = [

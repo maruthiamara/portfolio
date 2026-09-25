@@ -4,22 +4,23 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: [
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'SF Pro Display',
-          'Inter',
-          'Segoe UI',
-          'system-ui',
-          'sans-serif',
-        ],
+        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+        display: ['Outfit', 'Plus Jakarta Sans', 'sans-serif'],
       },
       colors: {
         ink: {
-          950: '#050507',
-          900: '#0a0a0f',
-          800: '#111119',
-          700: '#1a1a24',
+          950: '#030712',
+          900: '#0b0f19',
+          800: '#111827',
+          700: '#1f2937',
+        },
+        cyan: {
+          400: '#22d3ee',
+          500: '#06b6d4',
+        },
+        violet: {
+          500: '#8b5cf6',
+          600: '#7c3aed',
         },
       },
       backdropBlur: {
@@ -38,11 +39,16 @@ export default {
           '0%, 100%': { backgroundPosition: '0% 50%' },
           '50%': { backgroundPosition: '100% 50%' },
         },
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
       },
       animation: {
         'fade-up': 'fade-up 0.7s ease-out both',
         float: 'float 6s ease-in-out infinite',
         'gradient-pan': 'gradient-pan 8s ease infinite',
+        shimmer: 'shimmer 3s linear infinite',
       },
     },
   },

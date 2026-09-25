@@ -12,10 +12,11 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.6 }}
-          className="glass gradient-border mx-auto max-w-3xl rounded-[24px] p-8 sm:p-10"
-          style={{ ['--grad-from' as string]: 'rgba(99,102,241,0.5)', ['--grad-to' as string]: 'rgba(34,211,238,0.4)' }}
+          className="glass-card gradient-border mx-auto max-w-3xl rounded-[28px] p-8 sm:p-12 text-center sm:text-left relative overflow-hidden"
+          style={{ ['--grad-from' as string]: 'rgba(6,182,212,0.6)', ['--grad-to' as string]: 'rgba(139,92,246,0.6)' }}
         >
-          <p className="text-lg leading-relaxed text-white/75">{profile.summary}</p>
+          <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-cyan-500/10 blur-3xl pointer-events-none" />
+          <p className="text-lg sm:text-xl leading-relaxed text-white/85 font-medium relative z-10">{profile.summary}</p>
         </motion.div>
       </section>
 
@@ -25,7 +26,7 @@ export default function About() {
           title="Technical toolkit"
           subtitle="The languages, frameworks and infrastructure I build with."
         />
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {skillGroups.map((group, i) => (
             <motion.div
               key={group.label}
@@ -33,16 +34,19 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.5, delay: i * 0.06 }}
-              className="glass rounded-2xl border border-white/5 p-6 transition-colors hover:border-white/15"
+              className="glass-card rounded-2xl p-6 relative overflow-hidden group"
             >
-              <h3 className="text-sm font-semibold uppercase tracking-widest text-white/45">
-                {group.label}
-              </h3>
-              <div className="mt-4 flex flex-wrap gap-2">
+              <div className="flex items-center justify-between">
+                <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-400">
+                  {group.label}
+                </h3>
+                <span className="h-2 w-2 rounded-full bg-cyan-400/60 group-hover:bg-cyan-300 transition-colors" />
+              </div>
+              <div className="mt-5 flex flex-wrap gap-2">
                 {group.items.map((item) => (
                   <span
                     key={item}
-                    className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-1.5 text-sm text-white/80 transition-all hover:-translate-y-0.5 hover:border-cyan-300/40 hover:text-white"
+                    className="rounded-lg border border-white/10 bg-white/[0.04] px-3.5 py-1.5 text-sm font-medium text-white/85 transition-all hover:-translate-y-0.5 hover:border-cyan-400/50 hover:bg-cyan-950/40 hover:text-cyan-200"
                   >
                     {item}
                   </span>

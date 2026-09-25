@@ -6,17 +6,16 @@
 export const profile = {
   name: 'Maruthi Amara',
   shortName: 'Maruthi',
-  title: 'AI/ML Engineer',
+  title: 'Software Engineer',
   roles: [
     'AI/ML Engineer',
-    'Generative AI Developer',
-    'LLM & RAG Architect',
-    'Data Pipeline Engineer',
+    'Generative AI Engineer',
+    'Machine Learning Engineer',
+    'LLM & RAG Engineer',
   ],
   tagline:
     'Building scalable ML pipelines, RAG systems, LLM applications, and real-time AI solutions.',
   location: 'India',
-  // phone: '+91 9618166747',
   email: 'maruthiamara07@gmail.com',
   summary:
     'AI/ML Engineer with expertise in Machine Learning, Deep Learning, and Generative AI. Experienced in building scalable ML pipelines, RAG systems, LLM applications, and real-time AI solutions using Python, TensorFlow, PyTorch, FastAPI, Apache Kafka, Hadoop, PySpark, PostgreSQL (pgvector), and GeoServer.',

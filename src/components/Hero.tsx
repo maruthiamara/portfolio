@@ -48,6 +48,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="mx-auto mt-5 max-w-2xl text-lg text-white/70 sm:text-xl"
         >
+          <span className="font-semibold text-white">Software Engineer</span> — mainly focused on{' '}
           <Typewriter
             words={profile.roles}
             typingSpeed={90}
@@ -56,8 +57,7 @@ export default function Hero() {
             loop={true}
             className="font-semibold text-cyan-300"
             cursorClassName="text-cyan-400 font-normal"
-          />{' '}
-          — {profile.tagline}
+          />
         </motion.p>
 
         {/* Tech marquee row */}
